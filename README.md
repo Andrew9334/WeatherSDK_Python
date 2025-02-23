@@ -28,9 +28,12 @@
 
 ```python
 from weather_sdk.sdk import WeatherSDK
+```
 
 # Инициализация SDK с вашим API-ключом
+```python
 sdk = WeatherSDK(api_key="your_openweather_api_key", mode='on-demand')
+```
 
 ## Режимы работы
 * On-demand: Погода обновляется только по запросу. Если данные уже были получены и актуальны (менее 10 минут), SDK возвращает их из кеша.
@@ -55,4 +58,3 @@ sdk.delete_weather_data("Москва")
 pip install -r requirements.txt
 pytest
 ```
-
